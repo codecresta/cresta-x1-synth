@@ -1,0 +1,17 @@
+banks
+{
+	"basic";
+	"test";
+}
+presets
+{
+	"basic" "basic tri";
+	"basic" "basic sine";
+	"basic" "basic tri2";
+	"basic" "basic sine2";
+	"basic" "basic sine3";
+	"test" "pulse width mod";
+	"test" "test sine";
+	"test" "ring mod";
+	"test" "saw combo";
+}

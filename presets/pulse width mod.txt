@@ -1,0 +1,31 @@
+include "mice.txt"
+modules
+{
+	saw_tri_osc "osc1";
+	pulse_osc "osc2";
+}
+parameters
+{
+	bpm = 320;
+	range = 48;
+	atk = 0.1;
+	dec = 0.1;
+	sus = 1.0;
+	rel = 0.05;
+}
+connections
+{
+	"osc1", "osc2", shape, 1.0;
+}
+"osc1"
+{
+	signal = 0.45 "osc1 signal";
+	shape = 0.5;
+	tune = -1 "osc1 tune";
+}
+"osc2"
+{
+	signal = 0.1 "osc2 signal";
+	shape = 0.5;
+	tune = 0 "osc2 tune";
+}

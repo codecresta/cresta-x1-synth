@@ -1,0 +1,20 @@
+include "oct_nts.txt"
+modules
+{
+	saw_tri_osc "osc1";
+}
+parameters
+{
+	bpm = 140;
+	range = 24;
+	atk = 0.1;
+	dec = 0.1;
+	sus = 0.1;
+	rel = 0.05;
+}
+"osc1"
+{
+	signal = 1.0 "osc1 amt";
+	shape = 0.5;
+	tune = 0 "osc1 tune";
+}

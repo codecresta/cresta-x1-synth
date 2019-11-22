@@ -1,0 +1,29 @@
+include "c_mjr_arp.txt"
+modules
+{
+	sine_osc "osc1";
+	lp_filter "filter1";
+}
+parameters
+{
+	bpm = 140;
+	range = 24;
+	atk = 0.1;
+	dec = 0.1;
+	sus = 0.9;
+	rel = 0.05;
+}
+connections
+{
+	"osc1", "filter1", signal, 0.5, "osc1 amt";
+}
+"osc1"
+{
+	signal = 1.0;
+	tune = 0 "osc1 tune";
+}
+"filter1"
+{
+	cut_off = 0.9 "cut off";
+	resonance = 0.1 "resonance";
+}

@@ -1,0 +1,19 @@
+include "oct_nts2.txt"
+modules
+{
+	sine_osc "osc1";
+}
+parameters
+{
+	bpm = 140;
+	range = 24;
+	atk = 0.1;
+	dec = 0.1;
+	sus = 0.1;
+	rel = 0.05;
+}
+"osc1"
+{
+	signal = 1.0 "osc1 amt";
+	tune = 0 "osc1 tune";
+}

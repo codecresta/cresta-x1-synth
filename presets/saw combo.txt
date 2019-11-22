@@ -1,0 +1,38 @@
+include "mice.txt"
+modules
+{
+	saw_tri_osc "osc1";
+	saw_tri_osc "osc2";
+	lp_filter "filter1";
+}
+parameters
+{
+	bpm = 320;
+	range = 48;
+	atk = 0.1;
+	dec = 0.1;
+	sus = 1.0;
+	rel = 0.05;
+}
+connections
+{
+	"osc1", "filter1", signal, 1.0;
+	"osc2", "filter1", signal, 1.0;
+}
+"osc1"
+{
+	signal = 0.5;
+	tune = 0 "osc1 tune";
+	fine = 0 "osc1 fine";
+}
+"osc2"
+{
+	signal = 0.5;
+	tune = 0 "osc2 tune";
+	fine = 0.01 "osc2 fine";
+}
+"filter1"
+{
+	cut_off = 0.5 "cut off";
+	resonance = 0.5 "resonance";
+}
