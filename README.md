@@ -6,3 +6,5 @@ Includes a parser for presets and a sequencer. Written in C, C++, lex and yacc. 
 modular synthesiser in C++ then this would be a good starting point.
 
 Note: does not use modern C++ arrays.
+
+See the "GPL3.txt" file for licence details.
