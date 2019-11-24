@@ -4,39 +4,6 @@ Software version 1.2.0
 
 Main project for Cresta X1 Synth.  Contains parser, synth engine, front end and sound output.
 
-TODO:
-1. Rename most member variables by removing m_ prefix.
-2. Use constants instead of putting numbers in main code!
-3. Rename mixer module to attenuator / offset module.
-4. Add a low rate slew limiter module (with seperate rise and fall rates).
-5. Add a low rate sample and hold module.
-
-The rate s for the slew limiter is given by
-s = 2 * f / r
-Where the sample rate is r and the maximum frequency at which the value is allowed to change is f.
-Wikipedia suggests LFO rates are less than 20Hz.  Moog Voyager goes from 0.2 to 50Hz
-
-Old stuff:
-trying this in pre_lxr.l:
-
-<<EOF>> {
-	free(pre_fname);
-	if (!YY_CURRENT_BUFFER)
-		yyterminate();
-} ???
-
-old code:
-yylval->str = (char*)malloc(strlen(yytext) - 1);
-strncpy(yylval->str, &yytext[1], strlen(yytext) - 2);
-yylval->str[strlen(yytext) - 2] = '\0';
-int preerror(const char *msg)
-int synerror(const char* msg)
-
-CListBox* bank_lb;
-bank_lb = (CListBox*)GetDlgItem(IDC_LI_BANK);
-pre_fname = strcpy((char*)malloc(str_fname.length() + 1), str_fname.c_str());
-bank_lb->AddString(bank[i]);
-
 */
 
 #include "CrestaX1.h"
