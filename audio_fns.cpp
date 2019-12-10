@@ -3,10 +3,6 @@ audio_fns.cpp
 
 Implements various functions for audio processing / DSP.
 
-notes
------
-for chorus see http://www.musicdsp.org/archive.php?classid=4#98
-
 */
 
 #include "audio_fns.h"
