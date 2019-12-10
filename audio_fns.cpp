@@ -166,6 +166,10 @@ double AudioFns::multiEnv(int n, double x, double ya[], double yb[])
 
 void AudioFns::filter(double f, double r, double &x, double s, double b[])
 // Subtractive style VCF
+// This function may be subject to some other form of licence or copyright:
+// Source: https://www.musicdsp.org/en/latest/Filters/25-moog-vcf-variation-1.html
+// References: CSound source code, Stilson/Smith CCRMA paper.
+// Modified by paul.kellett@maxim.abel.co.uk July 2000
 // x = signal (0 to 1 range), f = frequency, r = resonance, s = sample rate, 
 // b = filter buffers (beware denormals!)
 {
